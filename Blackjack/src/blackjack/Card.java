@@ -1,21 +1,28 @@
 package blackjack;
 
+
 public class Card {
-	
 	private Suit suit;
-	private Value value;
-	
-	public Card(Suit suit, Value value) {
+	private Rank rank;
+
+	public Card(Rank rank, Suit suit) {
 		this.suit = suit;
-		this.value = value;
-	}
-	
-	public Value getValue() {
-		return value;
-	}
-	
-	public String toString() {
-		return value + " of " + suit;
+		this.rank = rank;
 	}
 
+	public Rank getRank() {
+		return rank;
+	}
+
+	public Rank softValue() {
+		return rank;
+	}
+
+	public Rank hardValue() {
+		return rank;
+	}
+
+	public String toString() {
+		 return rank + " of " + suit;
+	}
 }
