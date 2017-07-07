@@ -34,23 +34,23 @@ public class Deck {
 	}
 
 	/*
-	 * Deals the card from the deck
+	 * Deals the card from the deck And removes that card from the deck
 	 */
 	public void dealCard() {
 		deck.get(0);
+		deck.remove(0);
 	}
 
 	/*
-	 * Removes the dealt card from the deck
+	 * Gives us the Deck size to test the dealCard() method
 	 */
-	public void removeDealtCard() {
-		for (int i = 0; i < deck.size(); i++) {
-			deck.remove(deck.get(i));
-		}
+	public void deckSize() {
+		System.out.println("Deck size: " + deck.size());
+
 	}
 
 	public String toString() {
-		return "Deck is " + deck;
+		return String.format("%s \n", deck);
 	}
 
 }

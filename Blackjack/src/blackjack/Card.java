@@ -1,6 +1,5 @@
 package blackjack;
 
-
 public class Card {
 	private Suit suit;
 	private Rank rank;
@@ -23,6 +22,6 @@ public class Card {
 	}
 
 	public String toString() {
-		 return rank + " of " + suit;
+		return String.format("%s of %s", rank, suit);
 	}
 }
