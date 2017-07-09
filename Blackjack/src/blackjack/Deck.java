@@ -7,11 +7,14 @@ public class Deck {
 	 * A Deck Collection of our Card class
 	 */
 	private ArrayList<Card> deck;
+	// private Iterator<Card> iterator;
 
 	/*
-	 * Constructor to create the deck of cards Generate the cards using enhanced
-	 * for loops .values refers to the values of Enum deck.add adds new Card to
-	 * the deck using ArrayList method
+	 * Constructor to create the deck of cards 
+	 * Generate the cards using enhanced
+	 * for loops 
+	 * .values refers to the values of Enum 
+	 * deck.add adds new Card to the deck using ArrayList method
 	 */
 	public Deck() {
 		deck = new ArrayList<Card>();
@@ -22,23 +25,26 @@ public class Deck {
 		}
 	}
 
+	/*
+	 * getDeck method to return our deck
+	 */
 	public ArrayList<Card> getDeck() {
 		return deck;
 	}
 
 	/*
-	 * Shuffle method from Collections class
+	 * Shuffle method using Collections class method
 	 */
 	public void shuffle() {
 		Collections.shuffle(deck);
 	}
 
 	/*
-	 * Deals the card from the deck And removes that card from the deck
+	 * Deals the card from the deck then removes that card from the deck
 	 */
-	public void dealCard() {
+	public Card dealCard() {
 		deck.get(0);
-		deck.remove(0);
+		return deck.remove(0);
 	}
 
 	/*
