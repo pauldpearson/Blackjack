@@ -6,7 +6,7 @@ public class Player {
 
 	private int money;
 	private int bet;
-	private boolean ante;
+	//private boolean ante;
 	private ArrayList<Card> player;
 
 	/*
@@ -23,6 +23,10 @@ public class Player {
 
 	public boolean getAnte() {
 		return true;
+	}
+
+	public void hitMe() {
+
 	}
 
 	public String toString() {

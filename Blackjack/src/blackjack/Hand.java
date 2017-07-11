@@ -7,8 +7,6 @@ public class Hand {
 	private int handValue;
 	private ArrayList<Card> hand;
 	// private int aceCounter;
-	// private Iterator<Card> iterator;
-
 
 	public Hand(Deck deck) {
 		hand = new ArrayList<Card>();
@@ -18,20 +16,21 @@ public class Hand {
 		for (Card card : hand) {
 			handValue += card.getValue();
 		}
-		//TODO getValue doesn't work yet in Card class
 	}
 
-	public void addCard(Card card) {
-		this.hand.add(card);
-	}
+	// not sure if this method is needed, wouldn't hitCard() replace this or
+	// accomplish the same thing
+	// public void addCard(Card card) {
+	// this.hand.add(card);
+	// }
 
 	public int getHandValue() {
 		return handValue;
 	}
 
-	public int handSize() {
-		return hand.size();
-	}
+	// public int handSize() {
+	// return hand.size();
+	// }
 
 	public boolean isBlackjack() {
 		if (handValue == 21) {
@@ -41,6 +40,7 @@ public class Hand {
 		return false;
 	}
 
+	// not sure if I want this as a boolean or not...
 	public boolean isBusted() {
 		if (handValue > 21) {
 			return true;

@@ -10,11 +10,9 @@ public class Deck {
 	// private Iterator<Card> iterator;
 
 	/*
-	 * Constructor to create the deck of cards 
-	 * Generate the cards using enhanced
-	 * for loops 
-	 * .values refers to the values of Enum 
-	 * deck.add adds new Card to the deck using ArrayList method
+	 * Constructor to create the deck of cards Generate the cards using enhanced
+	 * for loops .values refers to the values of Enum deck.add adds new Card to
+	 * the deck using ArrayList method
 	 */
 	public Deck() {
 		deck = new ArrayList<Card>();

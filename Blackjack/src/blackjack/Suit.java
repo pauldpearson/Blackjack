@@ -5,10 +5,15 @@ Enum represents the Suit as a constant and has methods we can call on it
 */
 
 public enum Suit {
-	HEARTS, SPADES, DIAMONDS, CLUBS;
-	
-	static final char Clubs = '\u2663';
-	static final char Diamonds = '\u2666';
-	static final char Hearts = '\u2665';
-	static final char Spades = '\u2660';
+	SPADES("\u2660"), HEARTS("\u2665"), DIAMONDS("\u2666"), CLUBS("\u2663");
+
+	private final String icon;
+
+	Suit(String icon) {
+		this.icon = icon;
+	}
+
+	public String getIcon() {
+		return icon;
+	}
 }
