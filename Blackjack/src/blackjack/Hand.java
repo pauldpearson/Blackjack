@@ -49,7 +49,7 @@ public class Hand {
 	}
 
 	public String toString() {
-		return "Hand shows: " + hand + " " + handValue;
+		return "Hand shows: " + hand + " \nHand value: " + handValue;
 	}
 
 }
