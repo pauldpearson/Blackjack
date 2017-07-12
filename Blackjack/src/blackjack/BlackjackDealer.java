@@ -7,7 +7,7 @@ public class BlackjackDealer extends BlackjackPlayer {
 	public BlackjackDealer(Hand hand) {
 		super(hand);
 	}
-
+  
 	private ArrayList<Card> dealer;
 
 
