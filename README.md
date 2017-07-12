@@ -1,2 +1,2 @@
 # Blackjack
-A simple Blackjack project
+This is a Blackjack console game built in Java.
