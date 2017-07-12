@@ -9,20 +9,20 @@ public class BlackjackClient {
 		// System.out.print("Unsuffled deck: " + deck1);
 		// deck1.deckSize();
 		// System.out.println();
-		//
+
 		// Testing the above but with a deal from the deck
 		// System.out.print("Unshuffled deck minus one deal: " + deck1);
 		// deck1.dealCard();
 		// deck1.deckSize();
 		// System.out.println();
-		//
+
 		// Testing the shuffle method
 		// Deck deck2 = new Deck();
 		// deck2.shuffle();
 		// System.out.print("Shuffled deck: " + deck2);
 		// deck2.deckSize();
 		// System.out.println();
-		//
+
 		// Testing the shuffle method with a deal
 		// deck2.shuffle();
 		// System.out.print("Shuffled deck minus one deal: " + deck2);
@@ -30,12 +30,10 @@ public class BlackjackClient {
 		// deck2.deckSize();
 		// System.out.println();
 
-		for (int i = 0; i <= 10; i++) {
-			Deck deck3 = new Deck();
-			deck3.shuffle();
-			Hand hand = new Hand(deck3);
-			System.out.println(hand);
-			hand.isBlackjack();
-		}
+		Deck deck3 = new Deck();
+		deck3.shuffle();
+		Hand hand = new Hand(deck3);
+		System.out.println(hand);
+		hand.isBlackjack();
 	}
 }

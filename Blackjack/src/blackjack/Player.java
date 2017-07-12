@@ -26,7 +26,10 @@ public class Player {
 	}
 
 	public void hitMe() {
-
+		String ans = "";
+		if (ans.equalsIgnoreCase("yes")) {
+			// deal a card from the deck/hand???
+		}
 	}
 
 	public String toString() {
