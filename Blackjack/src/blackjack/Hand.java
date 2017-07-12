@@ -6,7 +6,6 @@ public class Hand {
 
 	private int handValue;
 	private ArrayList<Card> hand;
-	// private int aceCounter;
 
 	public Hand(Deck deck) {
 		hand = new ArrayList<Card>();
@@ -18,38 +17,28 @@ public class Hand {
 		}
 	}
 
-	// not sure if this method is needed, wouldn't hitCard() replace this or
-	// accomplish the same thing
-	// public void addCard(Card card) {
-	// this.hand.add(card);
-	// }
-
 	public int getHandValue() {
 		return handValue;
 	}
 
-	// public int handSize() {
-	// return hand.size();
-	// }
-
 	public boolean isBlackjack() {
 		if (handValue == 21) {
-			System.out.println("Blackjack!");
+			System.out.println("Blackjack!!!");
 			return true;
 		}
 		return false;
 	}
 
-	// not sure if I want this as a boolean or not...
 	public boolean isBusted() {
 		if (handValue > 21) {
+			System.out.println("Busted");
 			return true;
 		}
 		return false;
 	}
 
 	public String toString() {
-		return "Hand shows: " + hand + " \nHand value: " + handValue;
+		return hand + " \nHand value: " + handValue;
 	}
 
 }
