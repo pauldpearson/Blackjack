@@ -26,9 +26,9 @@ public class Deck {
 	/*
 	 * getDeck method to return our deck
 	 */
-	public ArrayList<Card> getDeck() {
-		return deck;
-	}
+//	public ArrayList<Card> getDeck() {
+//		return deck;
+//	}
 
 	/*
 	 * Shuffle method using Collections class method

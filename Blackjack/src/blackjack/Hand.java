@@ -21,21 +21,33 @@ public class Hand {
 		return handValue;
 	}
 
-	public boolean isBlackjack() {
+	public ArrayList<Card> getCard(Deck deck) {
+		hand = new ArrayList<Card>();
+		hand.add(deck.dealCard());
+		for (Card card : hand) {
+			handValue += card.getValue();
+		}
+		return hand;
+	}
+
+	public boolean isBlackjackOrBusted() {
 		if (handValue == 21) {
 			System.out.println("Blackjack!!!");
 			return true;
-		}
-		return false;
-	}
-
-	public boolean isBusted() {
-		if (handValue > 21) {
+		} else if (handValue > 21) {
 			System.out.println("Busted");
 			return true;
 		}
 		return false;
 	}
+
+//	public boolean isBusted() {
+//		if (handValue > 21) {
+//			System.out.println("Busted");
+//			return true;
+//		}
+//		return false;
+//	}
 
 	public String toString() {
 		return hand + " \nHand value: " + handValue;

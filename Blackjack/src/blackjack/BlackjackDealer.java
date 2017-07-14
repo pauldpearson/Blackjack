@@ -1,22 +1,21 @@
 package blackjack;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class BlackjackDealer extends BlackjackPlayer {
+public class BlackjackDealer {
 
-	public BlackjackDealer(Hand hand) {
-		super(hand);
+	private ArrayList<Hand> dealerHand;
+	
+	public BlackjackDealer() {
+		dealerHand = new ArrayList<Hand>();
 	}
-  
-	private ArrayList<Card> dealer;
-
-
-	public void dealCard() {
-		dealCard();
+	
+	public Hand dealHand(Deck deck) {
+		Hand dealerHand = new Hand(deck);
+		return dealerHand;
 	}
 
 	public String toString() {
-		return "Dealer is " + dealer;
+		return "Dealer's hand shows " + dealerHand;
 	}
-
 }
