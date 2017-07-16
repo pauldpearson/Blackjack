@@ -1,21 +1,46 @@
 package blackjack;
 
-import java.util.ArrayList;
 
 public class BlackjackPlayer {
-	
-	private int money;
-	private int ante;
-	private String name;
-	private ArrayList<Hand> playerHand;
-	
 
-	public BlackjackPlayer() {
-		playerHand = new ArrayList<Hand>();
+	private Hand playerHand;
+	private String name;
+
+	
+	public BlackjackPlayer(String name) {
+		this.name = name;
+	}
+
+	public Hand getHand() {
+		return playerHand = new Hand();
+	}
+
+	public Hand hitMe(Deck deck) {
+		playerHand.getCard(deck);
+		return playerHand;
+	}
+	
+	public int getPlayerHandValue() {
+		return playerHand.getHandValue();
+	}
+	
+	public boolean isBlackjack() {
+		if (playerHand.getHandValue() == 21) {
+			System.out.println("Blackjack!!!");
+			return true;
+		}
+		return false;
+	}
+
+	public boolean isBusted() {
+		if (playerHand.getHandValue() > 21) {
+			System.out.println("Busted");
+			return true;
+		}
+		return false;
 	}
 
 	public String toString() {
-		return "Player " + name + " hand shows " + playerHand;
+		return name + " " + playerHand;
 	}
-
 }

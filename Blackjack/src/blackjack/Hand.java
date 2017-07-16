@@ -7,7 +7,9 @@ public class Hand {
 	private int handValue;
 	private ArrayList<Card> hand;
 
-	public Hand(Deck deck) {
+	public Hand() {
+		Deck deck = new Deck();
+		deck.shuffle();
 		hand = new ArrayList<Card>();
 		for (int i = 0; i < 2; i++) {
 			hand.add(deck.dealCard());
@@ -29,25 +31,6 @@ public class Hand {
 		}
 		return hand;
 	}
-
-	public boolean isBlackjackOrBusted() {
-		if (handValue == 21) {
-			System.out.println("Blackjack!!!");
-			return true;
-		} else if (handValue > 21) {
-			System.out.println("Busted");
-			return true;
-		}
-		return false;
-	}
-
-//	public boolean isBusted() {
-//		if (handValue > 21) {
-//			System.out.println("Busted");
-//			return true;
-//		}
-//		return false;
-//	}
 
 	public String toString() {
 		return hand + " \nHand value: " + handValue;
