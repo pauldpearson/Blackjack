@@ -7,7 +7,6 @@ public class Deck {
 	 * A Deck Collection of our Card class
 	 */
 	private ArrayList<Card> deck;
-	// private Iterator<Card> iterator;
 
 	/*
 	 * Constructor to create the deck of cards Generate the cards using enhanced
@@ -23,12 +22,6 @@ public class Deck {
 		}
 	}
 
-	/*
-	 * getDeck method to return our deck
-	 */
-//	public ArrayList<Card> getDeck() {
-//		return deck;
-//	}
 
 	/*
 	 * Shuffle method using Collections class method
@@ -50,7 +43,6 @@ public class Deck {
 	 */
 	public void deckSize() {
 		System.out.println("Deck size: " + deck.size());
-
 	}
 
 	public String toString() {
