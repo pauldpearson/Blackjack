@@ -22,6 +22,7 @@ public class Deck {
 	
 	public static Deck createDeck() {
 		Deck deck = new Deck();
+		deck.shuffle();
 		return deck;
 	}
 
@@ -36,8 +37,8 @@ public class Deck {
 	 * Deals the card from the deck then removes that card from the deck
 	 */
 	public Card dealCard() {
-		// System.out.println(deck.get(0));
-		return deck.remove(0);
+		Card card = deck.remove(0);
+		return card;
 	}
 	
 	/*
@@ -62,13 +63,11 @@ public class Deck {
 	 * TEST
 	 */
 	public static void main(String[] args) {
-		Deck deck = new Deck();
-		System.out.println("Fresh deck \n" + deck + "\n");
-		deck.shuffle();
-		System.out.println("Shuffled deck \n" + deck + "\n");
-		deck.dealCard();
-		System.out.println("Deck after a deal\n" + deck);
+		
+		Deck deck = Deck.createDeck();
+		System.out.println(deck);
 		deck.deckSize();
+
 
 	}
 }

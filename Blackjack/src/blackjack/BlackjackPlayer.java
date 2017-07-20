@@ -2,10 +2,10 @@ package blackjack;
 
 import java.util.*;
 
-public class BlackjackPlayer {
-
-	private BlackjackDealer dealer; // Dealer, Player is being dealt from and
-									// playing against
+public class BlackjackPlayer extends Player {
+	 
+	// Sets up Dealer that Player is being dealt from and playing against
+	private Player dealer;
 	private Hand hand;
 
 	public BlackjackPlayer(Hand hand) {
@@ -25,6 +25,10 @@ public class BlackjackPlayer {
 
 	public Hand viewHand() {
 		return hand;
+	}
+	
+	public void setDealer(BlackjackDealer dealer) {
+		this.dealer = dealer;
 	}
 
 	// unsupported for Player
@@ -46,5 +50,7 @@ public class BlackjackPlayer {
 		System.out.println(p1);
 
 	}
+
+
 
 }

@@ -1,24 +1,29 @@
 package blackjack;
+
 import java.util.*;
+
 public class BlackjackClient {
 
-	private BlackjackPlayer player;
-	private BlackjackDealer dealer;
-	
-	public static void main(String[] args) {
-		
-		Deck deck = Deck.createDeck();
+	public static void gameStart() {
 
+		Deck deck = Deck.createDeck();
 		Hand h1 = new Hand(new ArrayList<Card>());
 		Hand h2 = new Hand(new ArrayList<Card>());
-		
+
 		BlackjackDealer dealer = BlackjackDealer.startGame(h1, deck);
 		BlackjackPlayer player = BlackjackPlayer.joinGame(h2);
-		
-		System.out.println(dealer);
-		System.out.println(player);
 
+		dealer.setPlayer(player);
+		player.setDealer(dealer);
+		dealer.dealHand();
+
+		System.out.println(player);
+		System.out.println(dealer);
+	}
+
+	public static void main(String[] args) {
 		
+		gameStart();
 
 	}
 }
