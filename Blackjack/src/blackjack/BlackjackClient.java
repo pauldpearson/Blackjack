@@ -4,7 +4,10 @@ import java.util.*;
 
 public class BlackjackClient {
 
-	public static void gameStart() {
+	// private BlackjackPlayer player;
+	// private BlackjackDealer dealer;
+
+	public static void playGame() {
 
 		Deck deck = Deck.createDeck();
 		Hand h1 = new Hand(new ArrayList<Card>());
@@ -16,14 +19,21 @@ public class BlackjackClient {
 		dealer.setPlayer(player);
 		player.setDealer(dealer);
 		dealer.dealHand();
+		h2.isBlackjack();
 
 		System.out.println(player);
 		System.out.println(dealer);
+
+		if (h2.getHandValue() > h1.getHandValue()) {
+			System.out.println("Player wins");
+		} else if (h1.getHandValue() > h2.getHandValue()) {
+			System.out.println("Dealer wins");
+		} else {
+			System.out.println("Push");
+		}
 	}
 
 	public static void main(String[] args) {
-		
-		gameStart();
-
+		playGame();
 	}
 }

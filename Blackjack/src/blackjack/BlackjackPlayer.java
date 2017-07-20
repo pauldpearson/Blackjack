@@ -37,7 +37,7 @@ public class BlackjackPlayer extends Player {
 	}
 
 	public String toString() {
-		return hand.toString() + "\nPlayer Hand Value " + hand.getHandValue();
+		return hand.toString() + "\nPlayer Hand Value " + hand.getHandValue() + "\n";
 	}
 
 	/*

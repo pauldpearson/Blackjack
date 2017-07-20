@@ -46,6 +46,14 @@ public class Hand {
 		}
 		return handValue;
 	}
+	
+	public boolean isBlackjack() {
+		if (handValue == 21) {
+			System.out.println("Blackjack!");
+			return true;
+		}
+		return false;
+	}
 
 	public String toString() {
 		return "" + hand;
