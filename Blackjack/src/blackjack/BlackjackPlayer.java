@@ -4,26 +4,47 @@ import java.util.*;
 
 public class BlackjackPlayer {
 
-	private ArrayList<Hand> playerHand;
+	private BlackjackDealer dealer; // Dealer, Player is being dealt from and
+									// playing against
+	private Hand hand;
 
-	public BlackjackPlayer() {
-		playerHand = new ArrayList<Hand>();
+	public BlackjackPlayer(Hand hand) {
+		this.hand = hand;
 	}
 
-	public ArrayList<Hand> getHand() {
-		return playerHand;
-	}
-	
-	public boolean hitMe(Hand hand) {
-		return true;
+	public static BlackjackPlayer joinGame(Hand hand) {
+		BlackjackPlayer player = new BlackjackPlayer(hand);
+		return player;
 	}
 
-	//TODO this is not working properly
-	public void hitMe() {
-		playerHand.get(0);
+	public Card hitMe() {
+		Card card = dealer.dealCard();
+		hand.addCard(card);
+		return card;
+	}
+
+	public Hand viewHand() {
+		return hand;
+	}
+
+	// unsupported for Player
+	public Card dealCard() {
+		throw new UnsupportedOperationException("Not available");
 	}
 
 	public String toString() {
-		return playerHand + "\n";
+		return hand.toString() + "\nPlayer Hand Value " + hand.getHandValue();
 	}
+
+	/*
+	 * TEST
+	 */
+	public static void main(String[] args) {
+		List<Card> sample = new ArrayList<Card>();
+		Hand hand = new Hand(sample);
+		BlackjackPlayer p1 = new BlackjackPlayer(hand);
+		System.out.println(p1);
+
+	}
+
 }

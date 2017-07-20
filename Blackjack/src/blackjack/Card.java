@@ -1,5 +1,6 @@
 package blackjack;
 
+
 public class Card {
 	private Suit suit;
 	private Rank rank;
@@ -12,25 +13,28 @@ public class Card {
 		this.rank = rank;
 	}
 
-	public Rank getRank() {
-		return rank;
-	}
-
-	/*
-	 * getValue() to get our rank value from Rank enum
-	 */
 	public int getValue() {
 		return rank.getCardValue();
-	}
-
-	/*
-	 * getSuit() to get our suit icon from Suit enum
-	 */
-	public String getSuit() {
-		return suit.getIcon();
 	}
 
 	public String toString() {
 		return rank.getCardSymbol() + " of " + suit.getIcon();
 	}
+
+	/*
+	 * TEST
+	 */
+	public static void main(String[] args) {
+	
+		Card card1 = new Card(Rank.EIGHT, Suit.HEARTS);
+		Card card2 = new Card(Rank.JACK, Suit.SPADES);
+		Card card3 = new Card(Rank.ACE, Suit.DIAMONDS);
+		System.out.println(card1);
+		System.out.println(card1.getValue());
+		System.out.println(card2);
+		System.out.println(card2.getValue());
+		System.out.println(card3);
+		System.out.println(card3.getValue());
+	}
+
 }

@@ -6,12 +6,10 @@ public class Deck {
 	/*
 	 * A Deck Collection of our Card class
 	 */
-	private ArrayList<Card> deck;
+	private List<Card> deck;
 
 	/*
-	 * Constructor to create the deck of cards Generate the cards using enhanced
-	 * for loops .values refers to the values of Enum deck.add adds new Card to
-	 * the deck using ArrayList method
+	 * Constructor to create a deck of cards
 	 */
 	public Deck() {
 		deck = new ArrayList<Card>();
@@ -21,10 +19,14 @@ public class Deck {
 			}
 		}
 	}
-
+	
+	public static Deck createDeck() {
+		Deck deck = new Deck();
+		return deck;
+	}
 
 	/*
-	 * Shuffle method using Collections class method
+	 * Shuffle method
 	 */
 	public void shuffle() {
 		Collections.shuffle(deck);
@@ -34,8 +36,15 @@ public class Deck {
 	 * Deals the card from the deck then removes that card from the deck
 	 */
 	public Card dealCard() {
-		deck.get(0);
+		// System.out.println(deck.get(0));
 		return deck.remove(0);
+	}
+	
+	/*
+	 * Tells us when the Deck is empty
+	 */
+	public boolean isDeckEmpty() {
+		return deck.isEmpty();
 	}
 
 	/*
@@ -46,7 +55,20 @@ public class Deck {
 	}
 
 	public String toString() {
-		return String.format("%s \n", deck);
+		return deck + "";
 	}
 
+	/*
+	 * TEST
+	 */
+	public static void main(String[] args) {
+		Deck deck = new Deck();
+		System.out.println("Fresh deck \n" + deck + "\n");
+		deck.shuffle();
+		System.out.println("Shuffled deck \n" + deck + "\n");
+		deck.dealCard();
+		System.out.println("Deck after a deal\n" + deck);
+		deck.deckSize();
+
+	}
 }

@@ -4,73 +4,61 @@ import java.util.*;
 
 public class Hand {
 
+	private List<Card> hand;
 	private int handValue;
-	private ArrayList<Card> hand;
 
-	// TODO need to change this constructor to remove the dealing of 2 cards
-	public Hand(Deck deck) {
-		hand = new ArrayList<Card>();
-//		for (int i = 0; i < 2; i+=1) {
-//			hand.add(deck.dealCard());
-//		}
-//		for (Card card : hand) {
-//			handValue += card.getValue();
-//		}
+	/*
+	 * Hand constructor
+	 */
+	public Hand(List<Card> hand) {
+		this.hand = hand;
 	}
 
+	/*
+	 * Creates a new empty Hand
+	 */
+	public Hand newHand() {
+		return new Hand(new ArrayList<Card>());
+	}
+
+	/*
+	 * Adds a Card to the Hand
+	 */
+	public void addCard(Card card) {
+		hand.add(card);
+	}
+
+	/*
+	 * Gives us the Top Card
+	 * Will be used in Dealer class
+	 */
+	public Card viewTopCard() {
+		return hand.get(0);
+	}
+
+	/*
+	 * Gives us the Hands value 
+	 * by adding the Cards values
+	 */
 	public int getHandValue() {
+		for (Card card : hand) {
+			handValue += card.getValue();
+		}
 		return handValue;
 	}
 
-	//TODO When printed to console this only shows the last dealt card
-	public ArrayList<Card> getCard(Deck deck) {  
-		hand = new ArrayList<Card>();
-		hand.add(deck.dealCard());
-		for (Card card : hand) {
-			handValue += card.getValue();
-		}
-		return hand;
-	}
-
-	// TODO This doesn't deal properly
-	// It deals out of order, test it without shuffling the deck
-	public ArrayList<Card> getHand(Deck deck) {
-		hand = new ArrayList<Card>();
-		for (int i = 0; i < 2; i++) {
-			hand.add(deck.dealCard());
-		}
-		for (Card card : hand) {
-			handValue += card.getValue();
-		}
-		return hand;
-	}
-	
-	/*
-	 * Determines if Hand is Blackjack
-	 * CURRENTLY WORKING
-	 */
-	public boolean isBlackjack(Hand hand) {
-		if (hand.getHandValue() == 21) {
-			System.out.println("Blackjack!!!\n");
-			return true;
-		}
-		return false;
-	}
-
-	/*
-	 * Determines if Hand is Busted
-	 * CURRENTLY WORKING
-	 */
-	public boolean isBusted(Hand hand) {
-		if (hand.getHandValue() > 21) {
-			System.out.println("Busted\n");
-			return true;
-		}
-		return false;
-	}
-
 	public String toString() {
-		return hand + "" + " \nHand value: " + handValue;
+		return "" + hand;
 	}
 
+	/*
+	 * TEST
+	 */
+	public static void main(String[] args) {
+		List<Card> cards = new ArrayList<Card>();
+		Hand hand = new Hand(cards);
+		hand.newHand();
+		hand.getHandValue();
+		System.out.println(hand);
+	}
 }
