@@ -19,7 +19,7 @@ public class Deck {
 			}
 		}
 	}
-	
+
 	public static Deck createDeck() {
 		Deck deck = new Deck();
 		deck.shuffle();
@@ -40,7 +40,7 @@ public class Deck {
 		Card card = deck.remove(0);
 		return card;
 	}
-	
+
 	/*
 	 * Tells us when the Deck is empty
 	 */
@@ -63,11 +63,8 @@ public class Deck {
 	 * TEST
 	 */
 	public static void main(String[] args) {
-		
 		Deck deck = Deck.createDeck();
 		System.out.println(deck);
 		deck.deckSize();
-
-
 	}
 }

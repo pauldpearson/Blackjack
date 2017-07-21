@@ -19,7 +19,6 @@ public class BlackjackClient {
 		dealer.setPlayer(player);
 		player.setDealer(dealer);
 		dealer.dealHand();
-		h2.isBlackjack();
 
 		System.out.println(player);
 		System.out.println(dealer);

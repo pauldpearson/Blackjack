@@ -8,7 +8,6 @@ public class BlackjackDealer extends Player {
 	private Hand hand;
 	// Player, Dealer is playing against
 	private Player player;
-	private BlackjackDealer dealer;
 
 	public BlackjackDealer(Hand hand, Deck deck) {
 		this.hand = hand;
