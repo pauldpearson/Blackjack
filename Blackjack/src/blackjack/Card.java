@@ -1,12 +1,15 @@
 package blackjack;
 
-
+//TODO Need to account for Ace soft and hard values
 public class Card {
 	private Suit suit;
 	private Rank rank;
 
-	/*
-	 * Card constructor passing Rank and Suit enum
+	/**
+	 * Card constructor
+	 * 
+	 * @param rank
+	 * @param suit
 	 */
 	public Card(Rank rank, Suit suit) {
 		this.suit = suit;
@@ -25,7 +28,7 @@ public class Card {
 	 * TEST
 	 */
 	public static void main(String[] args) {
-	
+
 		Card card1 = new Card(Rank.EIGHT, Suit.HEARTS);
 		Card card2 = new Card(Rank.JACK, Suit.SPADES);
 		Card card3 = new Card(Rank.ACE, Suit.DIAMONDS);

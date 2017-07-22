@@ -7,14 +7,16 @@ public enum Rank {
 
 	/**
 	 * Rank data members to call in our Card class
+	 * 
 	 * @param cardValue
-	 * @param cardSymbol 
+	 * @param cardSymbol
 	 */
 	private int cardValue;
 	private String cardSymbol;
 
 	/**
 	 * Rank Enum Constructor
+	 * 
 	 * @param cardValue
 	 * @param cardSymbol
 	 */

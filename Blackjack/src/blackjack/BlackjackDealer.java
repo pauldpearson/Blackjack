@@ -3,12 +3,17 @@ package blackjack;
 import java.util.ArrayList;
 
 public class BlackjackDealer extends Player {
-	// Deck dealer is using
+
 	private Deck deck;
 	private Hand hand;
-	// Player, Dealer is playing against
 	private Player player;
 
+	/**
+	 * BlackjackDealer constructor
+	 * 
+	 * @param hand
+	 * @param deck
+	 */
 	public BlackjackDealer(Hand hand, Deck deck) {
 		this.hand = hand;
 		this.deck = deck;
@@ -19,7 +24,7 @@ public class BlackjackDealer extends Player {
 		return dealer;
 	}
 
-	/*
+	/**
 	 * Deals a Card from the Deck
 	 */
 	public Card dealCard() {
@@ -27,7 +32,7 @@ public class BlackjackDealer extends Player {
 		return card;
 	}
 
-	/*
+	/**
 	 * Deals the Hand to both Player and Dealer
 	 */
 	public void dealHand() {
@@ -37,7 +42,7 @@ public class BlackjackDealer extends Player {
 		}
 	}
 
-	/*
+	/**
 	 * Allows Dealer to hit a Card to his Hand
 	 */
 	public Card hitMe() {
