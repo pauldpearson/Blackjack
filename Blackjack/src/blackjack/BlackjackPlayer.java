@@ -39,7 +39,7 @@ public class BlackjackPlayer extends Player {
 	}
 
 	/**
-	 * Gives the view of Hand
+	 * Gives the view of Player Hand
 	 */
 	public Hand viewHand() {
 		return hand;

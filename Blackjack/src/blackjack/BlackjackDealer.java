@@ -4,8 +4,19 @@ import java.util.ArrayList;
 
 public class BlackjackDealer extends Player {
 
+	/**
+	 * Sets up the Deck for Dealer
+	 */
 	private Deck deck;
+	
+	/**
+	 * Sets up the Hand for Dealer
+	 */
 	private Hand hand;
+	
+	/**
+	 * Sets up the Player the Dealer will play against and deal for
+	 */
 	private Player player;
 
 	/**
@@ -51,7 +62,12 @@ public class BlackjackDealer extends Player {
 		return card;
 	}
 
+	/**
+	 * Gives the view of Dealers Hand for Player
+	 * Minus Card
+	 */
 	public Hand viewHand() {
+		hand.viewTopCard();
 		return hand;
 	}
 

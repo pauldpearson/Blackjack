@@ -19,6 +19,7 @@ public class BlackjackClient {
 		dealer.setPlayer(player);
 		player.setDealer(dealer);
 		dealer.dealHand();
+		// NOT WORKING YET  dealer.viewHand();
 
 		System.out.println(player);
 		System.out.println(dealer);
