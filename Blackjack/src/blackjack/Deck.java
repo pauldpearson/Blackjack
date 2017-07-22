@@ -20,6 +20,10 @@ public class Deck {
 		}
 	}
 
+	/**
+	 * Create Deck method
+	 * @return deck
+	 */
 	public static Deck createDeck() {
 		Deck deck = new Deck();
 		deck.shuffle();
