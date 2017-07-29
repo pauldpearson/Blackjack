@@ -4,9 +4,8 @@ import java.util.*;
 
 public class BlackjackClient {
 
-
 	public static void playGame() {
-		
+
 		Deck deck = Deck.createDeck();
 		Hand h1 = new Hand(new ArrayList<Card>());
 		Hand h2 = new Hand(new ArrayList<Card>());
@@ -17,38 +16,26 @@ public class BlackjackClient {
 		dealer.setPlayer(player);
 		player.setDealer(dealer);
 		dealer.dealHand();
-		// NOT WORKING YET  dealer.viewHand();
+		// NOT WORKING YET dealer.viewHand();
 
 		System.out.println(player);
 		System.out.println(dealer);
 
-		int playerWins = 0;
-		int dealerWins = 0;
-		int push = 0;
-		
 		if (h2.getHandValue() > h1.getHandValue()) {
 			System.out.println("Player wins\n");
-			playerWins++;
 		} else if (h1.getHandValue() > h2.getHandValue()) {
 			System.out.println("Dealer wins\n");
-			dealerWins++;
 		} else {
 			System.out.println("Push\n");
-			push++;
 		}
-		System.out.println(playerWins + " times Player won");
-		System.out.println(dealerWins + " times Dealer won");
-		System.out.println(push + " times nobody won");
 
-	}
-
-	//TODO
-	public static int countWins() {
-		int count = 0;
-		return count;
 	}
 
 	public static void main(String[] args) {
-		playGame();
+
+		for (int i = 0; i <= 10; i++) {
+			playGame();
+			System.out.println("New Game\n");
+		}
 	}
 }
