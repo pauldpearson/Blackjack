@@ -4,8 +4,6 @@ import java.util.*;
 
 public class BlackjackClient {
 
-	// private BlackjackPlayer player;
-	// private BlackjackDealer dealer;
 
 	public static void playGame() {
 		
@@ -44,14 +42,13 @@ public class BlackjackClient {
 
 	}
 
+	//TODO
 	public static int countWins() {
 		int count = 0;
-
 		return count;
 	}
 
 	public static void main(String[] args) {
 		playGame();
-		
 	}
 }

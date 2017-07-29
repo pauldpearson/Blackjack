@@ -14,6 +14,7 @@ public class BlackjackPlayerTest {
 		List<Card> sample = new ArrayList<Card>();
 		Hand hand = new Hand(sample);
 		BlackjackPlayer p1 = new BlackjackPlayer(hand);
+		assertEquals(p1, p1);
 	
 	}
 
