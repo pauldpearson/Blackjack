@@ -8,4 +8,12 @@ public class BlackjackGame {
 
 	}
 
+	public BlackjackTable getTable() {
+		return table;
+	}
+
+	public void setTable(BlackjackTable table) {
+		this.table = table;
+	}
+
 }

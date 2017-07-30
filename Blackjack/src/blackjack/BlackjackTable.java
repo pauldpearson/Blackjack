@@ -10,9 +10,9 @@ public class BlackjackTable {
 	private Hand hand;
 
 	public BlackjackTable(Hand hand, Player player, Player dealer) {
-		this.hand = hand;
-		this.player = player;
-		this.dealer = dealer;
+		this.setHand(hand);
+		this.setPlayer(player);
+		this.setDealer(dealer);
 	}
 	
 	public static void startGame() {
@@ -47,6 +47,38 @@ public class BlackjackTable {
 		} else {
 			System.out.println("Push\n");
 		}
+	}
+
+	public Deck getDeck() {
+		return deck;
+	}
+
+	public void setDeck(Deck deck) {
+		this.deck = deck;
+	}
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
+	public Player getDealer() {
+		return dealer;
+	}
+
+	public void setDealer(Player dealer) {
+		this.dealer = dealer;
+	}
+
+	public Hand getHand() {
+		return hand;
+	}
+
+	public void setHand(Hand hand) {
+		this.hand = hand;
 	}
 
 }
