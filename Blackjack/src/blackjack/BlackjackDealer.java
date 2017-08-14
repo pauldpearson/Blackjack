@@ -8,12 +8,12 @@ public class BlackjackDealer extends Player {
 	 * Sets up the Deck for Dealer
 	 */
 	private Deck deck;
-	
+
 	/**
 	 * Sets up the Hand for Dealer
 	 */
 	private Hand hand;
-	
+
 	/**
 	 * Sets up the Player the Dealer will play against and deal for
 	 */
@@ -63,8 +63,7 @@ public class BlackjackDealer extends Player {
 	}
 
 	/**
-	 * Gives the view of Dealers Hand for Player
-	 * Minus Card
+	 * Gives the view of Dealers Hand for Player Minus Card
 	 */
 	public Hand viewHand() {
 		hand.viewTopCard();

@@ -8,7 +8,7 @@ public class Hand {
 	 * Collection of Cards that make up the Hand
 	 */
 	private List<Card> hand;
-	
+
 	/**
 	 * Hand Value data member
 	 */
@@ -16,6 +16,7 @@ public class Hand {
 
 	/**
 	 * Hand constructor
+	 * 
 	 * @param hand
 	 */
 	public Hand(List<Card> hand) {
@@ -39,7 +40,7 @@ public class Hand {
 	/**
 	 * Gives us the Top Card; will be used in Dealer class
 	 */
-	//NOT WORKING YET
+	// NOT WORKING YET
 	public Card viewTopCard() {
 		hand.remove(0);
 		return hand.get(0);
@@ -53,6 +54,32 @@ public class Hand {
 			handValue += card.getValue();
 		}
 		return handValue;
+	}
+
+	/**
+	 * Determines if the Hand is Blackjack
+	 * 
+	 * @return
+	 */
+	public boolean isBlackjack() {
+		if (getHandValue() == 21) {
+			System.out.println("Blackjack!");
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Determines if the Hand is Busted
+	 * 
+	 * @return
+	 */
+	public boolean isBusted() {
+		if (getHandValue() > 21) {
+			System.out.println("Busted");
+			return true;
+		}
+		return false;
 	}
 
 	public String toString() {

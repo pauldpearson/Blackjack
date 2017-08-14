@@ -21,6 +21,7 @@ public class BlackjackPlayer extends Player {
 
 	/**
 	 * Allows the BlackjackPlayer to join a game of Blackjack
+	 * 
 	 * @param hand
 	 * @return
 	 */
@@ -47,6 +48,7 @@ public class BlackjackPlayer extends Player {
 
 	/**
 	 * Sets up the Dealer for the Player
+	 * 
 	 * @param dealer
 	 */
 	public void setDealer(BlackjackDealer dealer) {
