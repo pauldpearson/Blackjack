@@ -31,13 +31,12 @@ public class Card {
 
 		Card card1 = new Card(Rank.EIGHT, Suit.HEARTS);
 		Card card2 = new Card(Rank.JACK, Suit.SPADES);
-		Card card3 = new Card(Rank.ACE, Suit.DIAMONDS);
+		int total = card1.getValue() + card2.getValue();
 		System.out.println(card1);
 		System.out.println(card1.getValue());
 		System.out.println(card2);
 		System.out.println(card2.getValue());
-		System.out.println(card3);
-		System.out.println(card3.getValue());
+		System.out.println(total);
 	}
 
 }
