@@ -29,6 +29,13 @@ public class BlackjackDealer extends Player {
 		this.hand = hand;
 		this.deck = deck;
 	}
+	
+	/**
+	 * 
+	 * @param hand
+	 * @param deck
+	 * @return
+	 */
 
 	public static BlackjackDealer startGame(Hand hand, Deck deck) {
 		BlackjackDealer dealer = new BlackjackDealer(hand, deck);
@@ -69,6 +76,10 @@ public class BlackjackDealer extends Player {
 		hand.viewTopCard();
 		return hand;
 	}
+	
+	/**
+	 * 
+	 */
 
 	public void newDeck() {
 		if (deck.isDeckEmpty()) {
@@ -76,6 +87,10 @@ public class BlackjackDealer extends Player {
 		}
 	}
 
+	/**
+	 * 
+	 * @param player
+	 */
 	public void setPlayer(Player player) {
 		this.player = player;
 	}
