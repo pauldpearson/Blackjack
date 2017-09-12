@@ -2,6 +2,11 @@ package blackjack;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author PaulPearson
+ *
+ */
 public class BlackjackDealer extends Player {
 
 	/**
@@ -29,21 +34,21 @@ public class BlackjackDealer extends Player {
 		this.hand = hand;
 		this.deck = deck;
 	}
-	
+
 	/**
+	 * Starts the game of Blackjack
 	 * 
 	 * @param hand
 	 * @param deck
-	 * @return
+	 * @return dealer
 	 */
-
 	public static BlackjackDealer startGame(Hand hand, Deck deck) {
 		BlackjackDealer dealer = new BlackjackDealer(hand, deck);
 		return dealer;
 	}
 
 	/**
-	 * Deals a Card from the Deck
+	 * Deals a card from the deck
 	 */
 	public Card dealCard() {
 		Card card = deck.dealCard();
@@ -76,11 +81,10 @@ public class BlackjackDealer extends Player {
 		hand.viewTopCard();
 		return hand;
 	}
-	
+
 	/**
 	 * 
 	 */
-
 	public void newDeck() {
 		if (deck.isDeckEmpty()) {
 			deck = Deck.createDeck();

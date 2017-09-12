@@ -59,7 +59,7 @@ public class Hand {
 	/**
 	 * Determines if the Hand is Blackjack
 	 * 
-	 * @return
+	 * @return false if not 21/Blackjack
 	 */
 	public boolean isBlackjack() {
 		if (getHandValue() == 21) {
@@ -72,7 +72,7 @@ public class Hand {
 	/**
 	 * Determines if the Hand is Busted
 	 * 
-	 * @return
+	 * @return false if hand is not busted
 	 */
 	public boolean isBusted() {
 		if (getHandValue() > 21) {

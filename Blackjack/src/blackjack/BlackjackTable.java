@@ -2,6 +2,11 @@ package blackjack;
 
 import java.util.ArrayList;
 
+/**
+ * @author PaulPearson
+ *	The Table where the game setup takes place
+ */
+
 public class BlackjackTable {
 
 	public void startGame() {
