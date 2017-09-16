@@ -2,6 +2,9 @@ package blackjack;
 
 import java.util.*;
 
+/**
+ *BlackjackPlayer
+ */
 public class BlackjackPlayer extends Player {
 
 	/**
