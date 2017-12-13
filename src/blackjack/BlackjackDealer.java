@@ -9,55 +9,30 @@ import java.util.ArrayList;
  */
 public class BlackjackDealer extends Player {
 
-	/**
-	 * Sets up the Deck for Dealer
-	 */
+
 	private Deck deck;
-
-	/**
-	 * Sets up the Hand for Dealer
-	 */
 	private Hand hand;
-
-	/**
-	 * Sets up the Player the Dealer will play against and deal for
-	 */
 	private Player player;
 
-	/**
-	 * BlackjackDealer constructor
-	 * 
-	 * @param hand
-	 * @param deck
-	 */
+
 	public BlackjackDealer(Hand hand, Deck deck) {
 		this.hand = hand;
 		this.deck = deck;
 	}
 
-	/**
-	 * Starts the game of Blackjack
-	 * 
-	 * @param hand
-	 * @param deck
-	 * @return dealer
-	 */
+
 	public static BlackjackDealer startGame(Hand hand, Deck deck) {
 		BlackjackDealer dealer = new BlackjackDealer(hand, deck);
 		return dealer;
 	}
 
-	/**
-	 * Deals a card from the deck
-	 */
+
 	public Card dealCard() {
 		Card card = deck.dealCard();
 		return card;
 	}
 
-	/**
-	 * Deals the Hand to both Player and Dealer
-	 */
+
 	public void dealHand() {
 		for (int i = 0; i < 2; i++) {
 			hitMe();
@@ -65,36 +40,27 @@ public class BlackjackDealer extends Player {
 		}
 	}
 
-	/**
-	 * Allows Dealer to hit a Card to his Hand
-	 */
+
 	public Card hitMe() {
 		Card card = dealCard();
 		hand.addCard(card);
 		return card;
 	}
 
-	/**
-	 * Gives the view of Dealers Hand for Player Minus Card
-	 */
+
 	public Hand viewHand() {
 		hand.viewTopCard();
 		return hand;
 	}
 
-	/**
-	 * 
-	 */
+
 	public void newDeck() {
 		if (deck.isDeckEmpty()) {
 			deck = Deck.createDeck();
 		}
 	}
 
-	/**
-	 * 
-	 * @param player
-	 */
+
 	public void setPlayer(Player player) {
 		this.player = player;
 	}

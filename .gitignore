@@ -2,3 +2,6 @@ Blackjack/.classpath
 .settings
 .project
 .class
+.idea/
+Blackjack.iml
+out/

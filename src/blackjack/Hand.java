@@ -4,51 +4,35 @@ import java.util.*;
 
 public class Hand {
 
-	/**
-	 * Collection of Cards that make up the Hand
-	 */
+
 	private List<Card> hand;
 
-	/**
-	 * Hand Value data member
-	 */
+
 	private int handValue;
 
-	/**
-	 * Hand constructor
-	 * 
-	 * @param hand
-	 */
+
 	public Hand(List<Card> hand) {
 		this.hand = hand;
 	}
 
-	/**
-	 * Creates a new empty Hand
-	 */
+
 	public Hand newHand() {
 		return new Hand(new ArrayList<Card>());
 	}
 
-	/**
-	 * Adds a Card to the Hand
-	 */
+
 	public void addCard(Card card) {
 		hand.add(card);
 	}
 
-	/**
-	 * Gives us the Top Card; will be used in Dealer class
-	 */
+
 	// NOT WORKING YET
 	public Card viewTopCard() {
 		hand.remove(0);
 		return hand.get(0);
 	}
 
-	/**
-	 * Gives us the Hands value by adding the Cards values
-	 */
+
 	public int getHandValue() {
 		for (Card card : hand) {
 			handValue += card.getValue();
@@ -56,11 +40,7 @@ public class Hand {
 		return handValue;
 	}
 
-	/**
-	 * Determines if the Hand is Blackjack
-	 * 
-	 * @return false if not 21/Blackjack
-	 */
+
 	public boolean isBlackjack() {
 		if (getHandValue() == 21) {
 			System.out.println("Blackjack!");
@@ -69,11 +49,7 @@ public class Hand {
 		return false;
 	}
 
-	/**
-	 * Determines if the Hand is Busted
-	 * 
-	 * @return false if hand is not busted
-	 */
+
 	public boolean isBusted() {
 		if (getHandValue() > 21) {
 			System.out.println("Busted");

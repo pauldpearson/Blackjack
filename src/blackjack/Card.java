@@ -5,12 +5,7 @@ public class Card {
 	private Suit suit;
 	private Rank rank;
 
-	/**
-	 * Card constructor
-	 * 
-	 * @param rank
-	 * @param suit
-	 */
+
 	public Card(Rank rank, Suit suit) {
 		this.suit = suit;
 		this.rank = rank;
@@ -24,9 +19,7 @@ public class Card {
 		return rank.getCardSymbol() + " of " + suit.getIcon();
 	}
 
-	/*
-	 * TEST
-	 */
+
 	public static void main(String[] args) {
 
 		Card card1 = new Card(Rank.EIGHT, Suit.HEARTS);
