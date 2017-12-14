@@ -9,5 +9,4 @@ public abstract class Player {
 	abstract Hand viewHand();
 
 	// Should we add an abstract method for isBlackjack and isBusted
-
 }

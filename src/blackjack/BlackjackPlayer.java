@@ -2,9 +2,7 @@ package blackjack;
 
 import java.util.*;
 
-
 public class BlackjackPlayer extends Player {
-
 
 	private Player dealer;
 	private Hand hand;
@@ -27,7 +25,6 @@ public class BlackjackPlayer extends Player {
 	public Hand viewHand() {
 		return hand;
 	}
-
 
 	public void setDealer(BlackjackDealer dealer) {
 		this.dealer = dealer;

@@ -6,7 +6,6 @@ public class Deck {
 
 	private List<Card> deck;
 
-
 	public Deck() {
 		deck = new ArrayList<Card>();
 		for (Suit s : Suit.values()) {
@@ -22,7 +21,6 @@ public class Deck {
 		return deck;
 	}
 
-
 	public void shuffle() {
 		Collections.shuffle(deck);
 	}
@@ -33,11 +31,9 @@ public class Deck {
 		return card;
 	}
 
-
 	public boolean isDeckEmpty() {
 		return deck.isEmpty();
 	}
-
 
 	public void deckSize() {
 		System.out.println("Deck size: " + deck.size());
