@@ -3,14 +3,9 @@ package blackjack;
 import java.util.ArrayList;
 
 
-
 public class BlackjackTable {
 
-	public void startGame() {
-
-	}
-
-	public static void playGame() {
+	private BlackjackTable() {
 
 		Deck deck = Deck.createDeck();
 		Hand dealerHand = new Hand(new ArrayList<Card>());
@@ -38,7 +33,6 @@ public class BlackjackTable {
 
 	public static void main(String[] args) {
 		BlackjackTable table = new BlackjackTable();
-		table.startGame();
 	}
 
 }
