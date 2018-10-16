@@ -25,7 +25,6 @@ public class Deck {
 		Collections.shuffle(deck);
 	}
 
-
 	public Card dealCard() {
 		Card card = deck.remove(0);
 		return card;

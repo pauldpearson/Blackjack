@@ -7,24 +7,19 @@ public class Hand {
 
 	private List<Card> hand;
 
-
 	private int handValue;
-
 
 	public Hand(List<Card> hand) {
 		this.hand = hand;
 	}
 
-
 	public Hand newHand() {
 		return new Hand(new ArrayList<Card>());
 	}
 
-
 	public void addCard(Card card) {
 		hand.add(card);
 	}
-
 
 	// NOT WORKING YET
 	public Card viewTopCard() {

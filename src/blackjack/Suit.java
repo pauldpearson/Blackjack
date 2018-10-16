@@ -1,13 +1,12 @@
 package blackjack;
 
-import java.awt.*;
-
 public enum Suit {
-    SPADES("\u2660"), HEARTS("\u2665"), DIAMONDS("\u2666"), CLUBS("\u2663");
+
+    SPADES("\u2660\uFE0F"), HEARTS("\u2764\uFE0F"), DIAMONDS("\u2666\uFE0F"), CLUBS("\u2663\uFE0F");
 
     private final String icon;
 
-    private Suit(String icon) {
+    Suit(String icon) {
         this.icon = icon;
     }
 
@@ -15,5 +14,4 @@ public enum Suit {
         return icon;
     }
 
-    //TODO set the color of suits for red or black
 }

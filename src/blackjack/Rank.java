@@ -9,7 +9,7 @@ public enum Rank {
     private int cardValue;
     private String cardSymbol;
 
-    private Rank(int cardValue, String cardSymbol) {
+    Rank(int cardValue, String cardSymbol) {
         this.cardValue = cardValue;
         this.cardSymbol = cardSymbol;
     }
