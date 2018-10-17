@@ -12,7 +12,5 @@ public class HandTest {
 		Hand hand = new Hand(cards);
 		hand.newHand();
 	}
-	
-	
 
 }
