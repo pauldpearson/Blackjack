@@ -22,10 +22,6 @@ public class BlackjackPlayer extends Player {
 		return card;
 	}
 
-	public Hand viewHand() {
-		return hand;
-	}
-
 	public void setDealer(BlackjackDealer dealer) {
 		this.dealer = dealer;
 	}
@@ -36,14 +32,6 @@ public class BlackjackPlayer extends Player {
 
 	public String toString() {
 		return hand.toString() + "\nPlayer Hand Value " + hand.getHandValue() + "\n";
-	}
-
-	public static void main(String[] args) {
-		List<Card> sample = new ArrayList<Card>();
-		Hand hand = new Hand(sample);
-		BlackjackPlayer p1 = new BlackjackPlayer(hand);
-		System.out.println(p1);
-
 	}
 
 }

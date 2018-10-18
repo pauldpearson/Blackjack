@@ -10,7 +10,7 @@ public class BlackjackDealerTest {
 
 	@Test
 	public void test() {
-		Deck deck = Deck.createDeck();
+		Deck deck = new Deck();
 		Hand h1 = new Hand(new ArrayList<Card>());
 		BlackjackDealer dealer = BlackjackDealer.startGame(h1, deck);
 		assertEquals(dealer, dealer);

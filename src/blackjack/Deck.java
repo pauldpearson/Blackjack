@@ -15,11 +15,10 @@ public class Deck {
 		}
 	}
 
-	public static Deck createDeck() {
-		Deck deck = new Deck();
-		deck.shuffle();
-		return deck;
-	}
+//	public static Deck createDeck() {
+//		Deck deck = new Deck();
+//		return deck;
+//	}
 
 	public void shuffle() {
 		Collections.shuffle(deck);
@@ -43,12 +42,4 @@ public class Deck {
 		return deck + "";
 	}
 
-	/*
-	 * TEST
-	 */
-	public static void main(String[] args) {
-		Deck deck = Deck.createDeck();
-		System.out.println(deck);
-		deck.deckSize();
-	}
 }

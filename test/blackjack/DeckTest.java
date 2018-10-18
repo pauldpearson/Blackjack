@@ -8,7 +8,7 @@ public class DeckTest {
 
 	@Test
 	public void testCreateDeck() {
-		Deck deck = Deck.createDeck();
+		Deck deck = new Deck();
 		for (int i = 0; i < 52; i++) {
 			deck.dealCard();
 		}

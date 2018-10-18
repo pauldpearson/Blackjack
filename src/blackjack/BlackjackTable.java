@@ -2,12 +2,13 @@ package blackjack;
 
 import java.util.ArrayList;
 
-
 public class BlackjackTable {
 
 	private BlackjackTable() {
 
-		Deck deck = Deck.createDeck();
+		Deck deck = new Deck();
+		deck.shuffle();
+
 		Hand dealerHand = new Hand(new ArrayList<Card>());
 		Hand playerHand = new Hand(new ArrayList<Card>());
 
