@@ -10,7 +10,7 @@ public class HandTest {
 	public void testNewHand() {
 		List<Card> cards = new ArrayList<Card>();
 		Hand hand = new Hand(cards);
-		hand.newHand();
+		//hand.newHand(cards);
 	}
 
 }

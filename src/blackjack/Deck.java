@@ -33,13 +33,7 @@ public class Deck {
 		return deck.isEmpty();
 	}
 
-	public void deckSize() {
-		System.out.println("Deck size: " + deck.size());
-	}
-
-	// TODO find a better way to print Deck
-	public String toString() {
-		return deck + "";
-	}
-
+//	public void deckSize() {
+//		System.out.println("Deck size: " + deck.size());
+//	}
 }

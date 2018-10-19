@@ -2,10 +2,12 @@ package blackjack;
 
 import java.util.*;
 
+//TODO need to add hard and soft values here for the hand
+
 public class Hand {
 
-
 	private List<Card> hand;
+	private Card card;
 
 	private int handValue;
 
@@ -13,18 +15,8 @@ public class Hand {
 		this.hand = hand;
 	}
 
-	public Hand newHand() {
-		return new Hand(new ArrayList<Card>());
-	}
-
-	public void addCard(Card card) {
+	public void addCard() {
 		hand.add(card);
-	}
-
-	// NOT WORKING YET
-	public Card viewTopCard() {
-		hand.remove(0);
-		return hand.get(0);
 	}
 
 	public int getHandValue() {

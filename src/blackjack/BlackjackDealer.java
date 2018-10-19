@@ -5,6 +5,7 @@ public class BlackjackDealer extends Player {
 	private Deck deck;
 	private Hand hand;
 	private Player player;
+	private Card card;
 
 	public BlackjackDealer(Hand hand, Deck deck) {
 		this.hand = hand;
@@ -17,11 +18,11 @@ public class BlackjackDealer extends Player {
 	}
 
 	public Card dealCard() {
-		Card card = deck.dealCard();
+		card = deck.dealCard();
 		return card;
 	}
 
-	public void dealHand() {
+	void dealHand() {
 		for (int i = 0; i < 2; i++) {
 			hitMe();
 			player.hitMe();
@@ -29,8 +30,8 @@ public class BlackjackDealer extends Player {
 	}
 
 	public Card hitMe() {
-		Card card = dealCard();
-		hand.addCard(card);
+		card = dealCard();
+		//hand.addCard(card);
 		return card;
 	}
 

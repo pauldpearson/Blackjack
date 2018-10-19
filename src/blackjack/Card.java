@@ -2,6 +2,7 @@ package blackjack;
 
 //TODO Need to account for Ace soft and hard values
 public class Card {
+
 	private Suit suit;
 	private Rank rank;
 
