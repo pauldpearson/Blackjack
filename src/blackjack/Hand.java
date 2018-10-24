@@ -1,57 +1,63 @@
 package blackjack;
 
-import java.util.*;
-
-//TODO need to add hard and soft values here for the hand
+import java.util.ArrayList;
+import java.util.List;
 
 public class Hand {
 
-	private List<Card> hand;
-	private Card card;
+    private List<Card> hand;
+    private Card card;
+    private int handValue;
 
-	private int handValue;
+    public Hand(List<Card> hand) {
+        this.hand = hand;
+    }
 
-	public Hand(List<Card> hand) {
-		this.hand = hand;
-	}
+    public void addCard() {
+        hand.add(card);
+    }
 
-	public void addCard() {
-		hand.add(card);
-	}
+    public int getHandValue() {
+        for (Card card : hand) {
+            handValue += card.getValue();
+        }
+        return handValue;
+    }
 
-	public int getHandValue() {
-		for (Card card : hand) {
-			handValue += card.getValue();
-		}
-		return handValue;
-	}
+    public boolean isBlackjack() {
+        if (getHandValue() == 21) {
+            System.out.println("Blackjack!");
+            return true;
+        }
+        return false;
+    }
 
-	public boolean isBlackjack() {
-		if (getHandValue() == 21) {
-			System.out.println("Blackjack!");
-			return true;
-		}
-		return false;
-	}
-
-	public boolean isBusted() {
-		if (getHandValue() > 21) {
-			System.out.println("Busted");
-			return true;
-		}
-		return false;
-	}
+    public boolean isBusted() {
+        if (getHandValue() > 21) {
+            System.out.println("Busted");
+            return true;
+        }
+        return false;
+    }
 
 	public String toString() {
-		return "" + hand;
+		return "Hand: " + hand;
 	}
 
-	/*
-	 * TEST
-	 */
-//	public static void main(String[] args) {
-//		List<Card> cards = new ArrayList<Card>();
-//		Hand hand = new Hand(cards);
-//		System.out.println("Empty hand: " + hand);
-//	}
+
+//    @Override
+//    public String toString() {
+//        return "Hand{" +
+//                "hand=" + hand +
+//                ", card=" + card +
+//                ", handValue=" + handValue +
+//                '}';
+//    }
+
+    public static void main(String[] args) {
+        List<Card> cards = new ArrayList<Card>();
+        Hand hand = new Hand(cards);
+        hand.addCard();
+        System.out.println(hand);
+    }
 }

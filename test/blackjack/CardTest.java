@@ -2,7 +2,11 @@ package blackjack;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Collection;
 
 public class CardTest {
 
@@ -13,8 +17,8 @@ public class CardTest {
 		
 		Card card2 = new Card(Rank.JACK, Suit.SPADES);
 		assertFalse(card2.getValue() == 4);
+
 	}
-	
-	
+
 
 }
