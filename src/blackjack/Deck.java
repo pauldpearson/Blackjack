@@ -15,11 +15,6 @@ public class Deck {
         }
     }
 
-//	public static Deck createDeck() {
-//		Deck deck = new Deck();
-//		return deck;
-//	}
-
     public void shuffle() {
         Collections.shuffle(deck);
     }
@@ -35,8 +30,9 @@ public class Deck {
     }
 
     //TODO make this a value so once empty we can get a new deck
-    public void deckSize() {
+    public int deckSize() {
         System.out.println("Deck size: " + deck.size());
+        return deck.size();
     }
 
     public String toString() {
@@ -51,8 +47,11 @@ public class Deck {
         System.out.println("\nShuffled deck: \n" + deck);
         System.out.println("\nDealing a card...\n");
         for (int i = 1; i <= 52; i++) {
+            //deck.deckSize();
             deck.dealCard();
+            if (deck.deckSize() == 1) {
+                System.out.println("Final card...");
+            }
         }
-        deck.deckSize();
     }
 }
