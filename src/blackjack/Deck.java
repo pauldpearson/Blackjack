@@ -26,6 +26,7 @@ public class Deck {
     }
 
     public boolean isDeckEmpty() {
+        System.out.println("Deck is empty");
         return deck.isEmpty();
     }
 
@@ -46,8 +47,8 @@ public class Deck {
         deck.shuffle();
         System.out.println("\nShuffled deck: \n" + deck);
         System.out.println("\nDealing a card...\n");
+
         for (int i = 1; i <= 52; i++) {
-            //deck.deckSize();
             deck.dealCard();
             if (deck.deckSize() == 1) {
                 System.out.println("Final card...");

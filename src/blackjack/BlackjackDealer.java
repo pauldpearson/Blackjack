@@ -30,16 +30,8 @@ public class BlackjackDealer extends Player {
 	}
 
 	public Card hitMe() {
-		card = dealCard();
-		//hand.addCard(card);
-		return card;
+		return dealCard();
 	}
-
-	//hand.viewTopCard is not working, probably not necessary either
-//	public Hand viewHand() {
-//		hand.viewTopCard();
-//		return hand;
-//	}
 
 	public void setPlayer(Player player) {
 		this.player = player;

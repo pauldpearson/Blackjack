@@ -2,9 +2,19 @@ package blackjack;
 
 public abstract class Player {
 
-    abstract Card hitMe();
+    private Hand hand;
+    private Card card;
 
-    abstract Card dealCard();
+    Card hitMe() {
+        hand.addCard();
+        return card;
+    }
 
-    //Should we add an abstract method for isBlackjack and isBusted
+    boolean isBlackjack() {
+        return hand.getHandValue() == 21;
+    }
+
+    boolean isBusted() {
+        return hand.getHandValue() >= 21;
+    }
 }

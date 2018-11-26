@@ -44,16 +44,6 @@ public class Hand {
 		return "Hand: " + hand;
 	}
 
-
-//    @Override
-//    public String toString() {
-//        return "Hand{" +
-//                "hand=" + hand +
-//                ", card=" + card +
-//                ", handValue=" + handValue +
-//                '}';
-//    }
-
     public static void main(String[] args) {
         List<Card> cards = new ArrayList<Card>();
         Hand hand = new Hand(cards);
